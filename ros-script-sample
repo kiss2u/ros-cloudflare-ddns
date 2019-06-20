@@ -1,0 +1,22 @@
+########修改并复制下面的内容到ros -- system -- script########
+
+:local WANInterface "拨号接口"  
+
+:local CFdomain "xxx.abc.com"
+:local CFzone "abc.com"
+
+:local CFemail "修改为你的Email"
+:local CFapikey "修改为你的API_KEY"
+
+:local CFzoneid "修改为你的zoneid"
+:local CFid "修改为你域名查询到的id"
+
+:local resolvedIP [:resolve $CFdomain]
+:local wanIP [/ip address get [find interface=$WANInterface] address]
+:set wanIP [:pick $wanIP 0 [:find $wanIP "/"]]
+:set wanIP [:toip $wanIP]
+:if ($resolvedIP != $wanIP) \
+do={/tool fetch http-method=put mode=https url="https://api.cloudflare.com/client/v4/zones/$CFzoneid/dns_records/$CFid" http-header-field="X-Auth-Email:$CFemail,X-Auth-Key:$CFapikey,content-type:application/json" output=none http-data="{\"type\":\"A\",\"name\":\"$CFdomain\",\"content\":\"$wanIP\"}"
+:delay 2
+/ip dns cache flush;
+}
