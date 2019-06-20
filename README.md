@@ -23,4 +23,8 @@ curl -X GET "https://api.cloudflare.com/client/v4/zones/修改为zone_id/dns_rec
 
 "id": "xxxxxxxxxxxxxxxxxxxxxxxxxxxx"
 
-就是你需要的CFid
+这个xxxxxxxxxxxxxxxxxxxxxxxxxxxx就是CFid
+
+编辑ros-ddns-sample
+
+脚本运行成功并且生效后，制作计划任务。
