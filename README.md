@@ -2,7 +2,7 @@
 
 API_KEY：右上角点头像，点My Profile，最下面Global API Key
 
-Zone ID：进入域名设置，overview下，右下角Zone ID
+Zone ID：进入域名设置，Overview页面下，右下角Zone ID
 
 ----------
 
