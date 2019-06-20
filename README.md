@@ -9,11 +9,12 @@
 获取CFid命令
 
 找个linux系统比如debian
-
+```
 apt install -y curl python
-
+```
+```
 curl -X GET "https://api.cloudflare.com/client/v4/zones/修改为你的zone_id/dns_records" -H "X-Auth-Email: 修改为你的Email" -H "X-Auth-Key: 修改为你的API_KEY" -H "Content-Type: application/json" | python -mjson.tool
-
+```
 显示结果中
 "content": "你的顶级域名"
 紧接着下面第二行
