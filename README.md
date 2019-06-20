@@ -13,7 +13,7 @@ Zone ID：进入域名设置，Overview页面下，右下角Zone ID
 apt install -y curl python
 ```
 ```
-curl -X GET "https://api.cloudflare.com/client/v4/zones/修改为zone_id/dns_records" -H "X-Auth-Email: 修改为Email" -H "X-Auth-Key: 修改为API_KEY" -H "Content-Type: application/json" | python -mjson.tool
+curl -X GET "https://api.cloudflare.com/client/v4/zones/修改为zone_id/dns_records" -H "X-Auth-Email: 修改为登入cloudflare的Email" -H "X-Auth-Key: 修改为API_KEY" -H "Content-Type: application/json" | python -mjson.tool
 ```
 显示结果中
 
