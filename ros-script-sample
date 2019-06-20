@@ -5,11 +5,11 @@
 :local CFdomain "xxx.abc.com"
 :local CFzone "abc.com"
 
-:local CFemail "修改为你的Email"
-:local CFapikey "修改为你的API_KEY"
+:local CFemail "修改为登入cloudflare的Email"
+:local CFapikey "修改为API_KEY"
 
-:local CFzoneid "修改为你的zoneid"
-:local CFid "修改为你域名查询到的id"
+:local CFzoneid "修改为zoneid"
+:local CFid "修改为域名查询到的id"
 
 :local resolvedIP [:resolve $CFdomain]
 :local wanIP [/ip address get [find interface=$WANInterface] address]
